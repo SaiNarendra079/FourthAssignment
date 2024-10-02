@@ -1,0 +1,295 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+.top{
+  color: black; 
+  height: 30px;
+  align-content: center;
+  font-weight: bolder;
+  animation: top 5s linear infinite;
+}
+@keyframes top{
+  0%{
+    transform: rotateY(0deg);
+  }
+  25%{
+    transform: rotateY(90deg);
+  }
+  50%{
+    transform: rotateY(180deg);
+  }
+  100%{
+    transform: rotateY(360deg);
+  }
+}
+.logo{
+  width: 200px;
+  margin: auto;
+  animation: logo 1s linear infinite;
+}
+@keyframes logo{
+  0%{
+    transform: scale(0.7);
+
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+/* Header and Navigation */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top:0px; 
+  left:0px; 
+  right:0px; 
+  overflow:hidden;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: greenyellow;
+}
+nav ul li :active{
+  /* color: blue; */
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  color: black;
+  text-align: center;
+  padding: 30px 0;
+  height: 350px;
+}
+
+.hero h1 {
+  font-size: 3em;
+}
+
+.hero p {
+  font-size: 1.5em;
+}
+.hero-btn{
+  margin: auto;
+  width: 80px;
+  border-radius: 10px;
+  color: white;
+  background-color: #333;
+}
+.hero button a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Menu Page Styling */
+main ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+main ul li {
+  margin: 0 15px;
+}
+
+main ul li a {
+  color: #ec1010;
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu-category {
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 0 20px;
+  margin-bottom: 70px;
+}
+
+.menu-category h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.menu-item img {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+.menu-item img:hover{
+  transform: scale(1.2);
+  border: 3px solid black;
+  animation: menu-img 1s linear infinite;
+}
+@keyframes menu-img{
+  0%{
+    border-top: none;
+    border-bottom: 3px solid blue;
+    border-color: aqua;
+  }
+  25%{
+    border-color: aquamarine;
+    border-bottom: 3px solid red;
+  }
+  50%{
+    border-color: blue;
+  }
+  100%{
+    border-color: red;
+  }
+}
+
+.menu-item h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.menu-item p {
+  margin: 5px 0;
+}
+
+.menu-item .price {
+  font-weight: bold;
+  color: #e63946;
+}
+
+/* About Page Styling */
+main img {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  display: block;
+}
+.additem{
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: yellow;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px gray;
+}
+.additem:active{
+  position: relative;
+  top: 2px;
+}
+/* Contact Page Styling */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  /* margin-top: 20px; */
+  position: fixed;
+  bottom:0px; 
+   
+  left:0px; 
+  right:0px; 
+  overflow:hidden;
+}
+@media(max-width:970px){
+  .hero {
+    padding: 20px;
+
+  }
+  .hero h1{
+    font-size: 2em;
+
+  }
+  .hero p{
+    font-size: 1em;
+  }
+  .hero img{
+    width: 45%;
+  }
+  .about_us{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+}
+@media(max-width:785px){
+  .menu-category{
+    margin-bottom: 100px;
+  }
+  footer{
+    font-size: small;
+  }
+  input, textarea {
+    width: 72%;
+  }
+}
+@media(max-width:525px){
+  .menu-category{
+    margin-bottom: 150px;
+  }
+  .menus{
+    display: flex;
+    flex-direction: column;
+  }
+  input, textarea {
+    width: 50%;
+  }
+}
